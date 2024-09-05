@@ -10,6 +10,10 @@ namespace _2.ParaClub
     {
         static void Main(string[] args)
         {
+           int y = Config.SCREEN_HEIGHT; //hauteur de l'écran
+           int x = Config.SCREEN_WIDTH; //largeur de l'écran
+
+            Console.SetWindowSize(x, y);
         }
     }
 }
