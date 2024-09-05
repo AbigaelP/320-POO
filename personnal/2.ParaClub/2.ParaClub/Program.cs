@@ -10,12 +10,7 @@ namespace _2.ParaClub
     {
         static void Main(string[] args)
         {
-           int y = Config.SCREEN_HEIGHT; //hauteur de l'écran
-           int x = Config.SCREEN_WIDTH; //largeur de l'écran
-
-            Console.SetWindowSize(x, y);
-            
-            //c'est mieux : Console.SetWindowSize(Config.SCREEN_WIDTH, Config.SCREEN_HEIGHT) 
+            Console.SetWindowSize(Config.SCREEN_WIDTH, Config.SCREEN_HEIGHT) 
             
             Plane plane = new Plane();
 
