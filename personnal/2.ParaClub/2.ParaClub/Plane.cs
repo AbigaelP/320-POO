@@ -18,14 +18,29 @@ namespace _2.ParaClub
             @"        \_____|_____/   |  "
         };
 
+        int x = 0; //position sur l'axe x
+       
+
 
         //methode
 
-        public void draw()
+        public void update()
         {
+            x++;
+        }
+
+        public void draw()
+        { 
+            int y = 0;
+            
             for (int i = 0; i < view.Length; i++)
-            { 
-            Console.WriteLine(view[i]);
+            {
+                Console.SetCursorPosition(x,y);
+   
+               Console.WriteLine(view[i]);
+
+               y++;
+               
             }
         }
     }
