@@ -27,6 +27,12 @@ namespace _2.ParaClub
         public void update()
         {
             x++;
+
+            if (x == Config.SCREEN_WIDTH)
+            {
+                x = 0;
+            }
+            
         }
 
         public void draw()
