@@ -27,8 +27,9 @@ namespace _2.ParaClub
          @" / \ ",
          };
         private string _name = "Bob";
-        private int _x = 0;             //position y du parachutiste
+        private int _x = 0;             //position x du parachutiste
         private int _y = 0;
+        private int _taillePara = 6;
 
         //Méthode
         public void Draw()
@@ -43,9 +44,9 @@ namespace _2.ParaClub
         public void Update()
         {
             _y++;
-            if (_y >= 33)
+            if (_y > Config.SCREEN_HEIGHT - _taillePara)
             {
-                _y = 33;
+                _y = Config.SCREEN_HEIGHT - _taillePara;
             }
         }
     }
