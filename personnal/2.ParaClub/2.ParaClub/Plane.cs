@@ -8,7 +8,7 @@ namespace _2.ParaClub
 {
     internal class Plane
     {
-        private string[] view =
+        private string[] _view =
         {
             @" _                         ",
             @"| \                        ",
@@ -18,31 +18,25 @@ namespace _2.ParaClub
             @"        \_____|_____/   |  "
         };
 
-        int x = 0; //position sur l'axe x
-
-
+        private int _x = 0; //position sur l'axe x
 
         //methode
-
         public void Update()
         {
-            x++;
-
-            if (x == Config.SCREEN_WIDTH)
+            _x++;
+            if (_x == Config.SCREEN_WIDTH)
             {
-                x = 0;
+                _x = 0;
             }
-
         }
 
         public void Draw()
         {
             int y = 0;
-
-            for (int i = 0; i < view.Length; i++)
+            for (int i = 0; i < _view.Length; i++)
             {
-                Console.SetCursorPosition(x, y);
-                Console.WriteLine(view[i]);
+                Console.SetCursorPosition(_x, y);
+                Console.WriteLine(_view[i]);
                 y++;
             }
         }

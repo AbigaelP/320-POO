@@ -8,7 +8,7 @@ namespace _2.ParaClub
 {
     internal class Para
     {
-        private string[] withoutParachute =
+        private string[] _withoutParachute =
         {
          @"     ",
          @"     ",
@@ -17,7 +17,7 @@ namespace _2.ParaClub
          @" /░\ ",
          @" / \ ",
          };
-        private string[] withParachute =
+        private string[] _withParachute =
         {
          @" ___ ",
          @"/|||\",
@@ -25,24 +25,28 @@ namespace _2.ParaClub
          @" \o/ ",
          @"  ░  ",
          @" / \ ",
-         };  
-        private string name = "Bob";
+         };
+        private string _name = "Bob";
+        private int _x = 0;             //position y du parachutiste
+        private int _y = 0;
 
-        int x = 0;  //position y du parachutiste
-
+        //Méthode
         public void Draw()
         {
-            int y = 0;
-
-            for (int i = 0; i < withoutParachute.LongLength; i++)
+            Console.SetCursorPosition(_x, _y);
+            for (int i = 0; i < _withoutParachute.LongLength; i++)
             {
-                Console.SetCursorPosition(x, y);
-                Console.WriteLine(withoutParachute[i]);
-                y++;
+                Console.WriteLine(_withoutParachute[i]);
             }
         }
 
-
-
+        public void Update()
+        {
+            _y++;
+            if (_y >= 33)
+            {
+                _y = 33;
+            }
+        }
     }
 }

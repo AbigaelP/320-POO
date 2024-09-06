@@ -16,12 +16,11 @@ namespace _2.ParaClub
             Plane plane = new Plane();
             Para para = new Para();
 
-
             while (true)
             {
                 // Modifier le modèle (ce qui *est*)
                 plane.Update();
-                
+                para.Update();
 
                 // Modifier ce que l'on *voit*
                 Console.Clear();
