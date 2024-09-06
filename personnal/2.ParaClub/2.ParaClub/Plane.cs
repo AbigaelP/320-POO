@@ -19,7 +19,7 @@ namespace _2.ParaClub
         };
 
         int x = 0; //position sur l'axe x
-       
+
 
 
         //methode
@@ -32,21 +32,18 @@ namespace _2.ParaClub
             {
                 x = 0;
             }
-            
+
         }
 
         public void draw()
-        { 
+        {
             int y = 0;
-            
+
             for (int i = 0; i < view.Length; i++)
             {
-                Console.SetCursorPosition(x,y);
-   
-               Console.WriteLine(view[i]);
-
-               y++;
-               
+                Console.SetCursorPosition(x, y);
+                Console.WriteLine(view[i]);
+                y++;
             }
         }
     }
