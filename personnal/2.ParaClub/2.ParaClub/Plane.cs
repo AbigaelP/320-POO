@@ -20,6 +20,9 @@ namespace _2.ParaClub
 
         private int _x = 0; //position sur l'axe x
 
+        public int X { get => _x; set => _x = value; }
+
+
         //methode
         public void Update()
         {
