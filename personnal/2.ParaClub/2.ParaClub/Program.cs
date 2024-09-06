@@ -20,12 +20,12 @@ namespace _2.ParaClub
             while (true)
             {
                 // Modifier le modèle (ce qui *est*)
-                plane.update();
+                plane.Update();
                 
 
                 // Modifier ce que l'on *voit*
                 Console.Clear();
-                plane.draw();
+                plane.Draw();
                 para.Draw();
 
                 // Temporiser

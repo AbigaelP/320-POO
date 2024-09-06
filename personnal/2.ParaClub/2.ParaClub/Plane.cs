@@ -24,7 +24,7 @@ namespace _2.ParaClub
 
         //methode
 
-        public void update()
+        public void Update()
         {
             x++;
 
@@ -35,7 +35,7 @@ namespace _2.ParaClub
 
         }
 
-        public void draw()
+        public void Draw()
         {
             int y = 0;
 
