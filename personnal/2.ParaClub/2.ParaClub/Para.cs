@@ -35,9 +35,19 @@ namespace _2.ParaClub
         public void Draw()
         {
             Console.SetCursorPosition(_x, _y);
-            for (int i = 0; i < _withoutParachute.LongLength; i++)
+            if ((_y == Config.SCREEN_HEIGHT - _taillePara) || (_y < Config.SCREEN_HEIGHT / 2))
             {
-                Console.WriteLine(_withoutParachute[i]);
+                for (int i = 0; i < _withoutParachute.LongLength; i++)
+                {
+                    Console.WriteLine(_withoutParachute[i]);
+                }
+            }
+            else
+            {
+                for (int i = 0; i < _withParachute.LongLength; i++)
+                {
+                    Console.WriteLine(_withParachute[i]);
+                }
             }
         }
 
