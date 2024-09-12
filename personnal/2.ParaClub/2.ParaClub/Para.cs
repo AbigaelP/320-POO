@@ -29,7 +29,7 @@ namespace _2.ParaClub
         private string _name = "Bob";
         private int _x = 0;             //position x du parachutiste
         private int _y = 0;
-        private int _taillePara = 6;
+        private int _taillePara = 7;
 
         //Méthode
         public void Draw()
