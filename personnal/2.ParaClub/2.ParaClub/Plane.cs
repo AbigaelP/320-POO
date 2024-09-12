@@ -1,4 +1,5 @@
 ﻿using System;
+using System.CodeDom;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,7 +21,7 @@ namespace _2.ParaClub
 
         private int _x = 0; //position sur l'axe x
 
-        public int X { get => _x; set => _x = value; }
+        private List<Para> _parachutistes = new List<Para>();
 
 
         //methode
@@ -30,6 +31,10 @@ namespace _2.ParaClub
             if (_x == Config.SCREEN_WIDTH)
             {
                 _x = 0;
+            }
+            foreach (Para para in _parachutistes)
+            {
+                para.Update();
             }
         }
 
@@ -42,6 +47,17 @@ namespace _2.ParaClub
                 Console.WriteLine(_view[i]);
                 y++;
             }
+            foreach (Para para in _parachutistes)
+            {
+                para.Draw();
+            }
+        }
+
+        public void Add()
+        {
+            Para para = new Para();
+            para.X = _x;
+            _parachutistes.Add(para);
         }
     }
 }

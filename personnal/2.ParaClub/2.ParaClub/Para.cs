@@ -32,14 +32,17 @@ namespace _2.ParaClub
         private int _taillePara = 7;
         private bool _chute = false;
 
+        public int X { get => _x; set => _x = value; }
+
         //Méthode
         public void Draw()
         {
-            Console.SetCursorPosition(_x, _y);
+
             if ((_y == Config.SCREEN_HEIGHT - _taillePara) || (_y < Config.SCREEN_HEIGHT / 2))
             {
                 for (int i = 0; i < _withoutParachute.LongLength; i++)
                 {
+                    Console.SetCursorPosition(_x, _y+i);
                     Console.WriteLine(_withoutParachute[i]);
                 }
             }
@@ -47,6 +50,7 @@ namespace _2.ParaClub
             {
                 for (int i = 0; i < _withParachute.LongLength; i++)
                 {
+                    Console.SetCursorPosition(_x, _y+i);
                     Console.WriteLine(_withParachute[i]);
                 }
                 _chute = true;

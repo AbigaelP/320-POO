@@ -14,18 +14,16 @@ namespace _2.ParaClub
             Console.SetWindowSize(Config.SCREEN_WIDTH, Config.SCREEN_HEIGHT); 
             
             Plane plane = new Plane();
-            Para para = new Para();
 
             while (true)
             {
                 // Modifier le modèle (ce qui *est*)
                 plane.Update();
-                para.Update();
+                
 
                 // Modifier ce que l'on *voit*
                 Console.Clear();
                 plane.Draw();
-                para.Draw();
 
                 // Temporiser
                 Thread.Sleep(100);
@@ -35,10 +33,11 @@ namespace _2.ParaClub
                     ConsoleKeyInfo keyPressed = Console.ReadKey(false);
                     switch (keyPressed.Key)
                     {
-                        case ConsoleKey.Escape:
-  
+                        case ConsoleKey.Spacebar:
+                            plane.Add();
+                            
                             break;
-                        case ConsoleKey.Enter:
+                        case ConsoleKey.Escape:
                             Environment.Exit(0);
                             break;
                     }
