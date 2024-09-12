@@ -30,6 +30,7 @@ namespace _2.ParaClub
         private int _x = 0;             //position x du parachutiste
         private int _y = 0;
         private int _taillePara = 7;
+        private bool _chute = false;
 
         //Méthode
         public void Draw()
@@ -48,12 +49,21 @@ namespace _2.ParaClub
                 {
                     Console.WriteLine(_withParachute[i]);
                 }
+                _chute = true;
             }
         }
 
         public void Update()
         {
-            _y++;
+            if (_chute)
+            {
+                _y++;
+            }
+            else 
+            {
+                _y += 3;
+            }
+            
             if (_y > Config.SCREEN_HEIGHT - _taillePara)
             {
                 _y = Config.SCREEN_HEIGHT - _taillePara;
