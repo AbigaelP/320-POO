@@ -1,8 +1,10 @@
-﻿using System;
+﻿using Drones.Helpers;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Drones
 {
@@ -18,5 +20,10 @@ namespace Drones
         public int Y { get => _y; set => _y = value; }
         public int Largeur { get => _largeur; }
         public int Profondeur { get => _profondeur; }
+        public Building() 
+        {
+            _x = Helper.Random(0, AirSpace.WIDTH - 100);
+            _y = Helper.Random(0, AirSpace.HEIGHT - 100);
+        }
     }
 }

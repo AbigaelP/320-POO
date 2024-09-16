@@ -20,8 +20,8 @@ namespace Drones
         public void Update(int interval)
         {
             X += 2;                                    // Il s'est déplacé de 2 pixels vers la droite
-            Y += Helper.Random(-2, 3);                     // Il s'est déplacé d'une valeur aléatoire vers le haut ou le bas
-            _charge--;                                  // Il a dépensé de l'énergie
+            Y += Helper.Random(-2, 3);                 // Il s'est déplacé d'une valeur aléatoire vers le haut ou le bas
+            _charge--;                                 // Il a dépensé de l'énergie
         }
 
     }

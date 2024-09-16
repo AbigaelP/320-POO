@@ -25,9 +25,17 @@ namespace Drones
             //Création de l'amat de buildings
             List<Building> amat = new List<Building>();
             Building building = new Building();
-            building.X = Helper.Random(0,AirSpace.WIDTH);
-            building.Y = Helper.Random(0,AirSpace.HEIGHT);
             amat.Add(building);
+            for (int i = 0; i < 5; i++)
+            {
+                Factory usine = new Factory();
+                amat.Add(usine);
+            }
+            for (int i = 0;i < 5; i++)
+            {
+                Store magasin = new Store();
+                amat.Add(magasin);
+            }
 
             // Démarrage
             Application.Run(new AirSpace(fleet, amat));

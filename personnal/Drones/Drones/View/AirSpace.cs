@@ -44,7 +44,20 @@ namespace Drones
 
             foreach (Building building in amat)
             {
-                building.Render(airspace);
+                if (building.GetType() == typeof(Store))
+                {
+                    Store store = (Store)building;
+                    store.Render(airspace);
+                }
+                else if (building.GetType() == typeof(Factory))
+                {
+                    Factory factory = (Factory)building;
+                    factory.Render(airspace);
+                }
+                else
+                {
+                    //building.Render(airspace);
+                }
             }
 
             airspace.Render();
