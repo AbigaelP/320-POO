@@ -1,4 +1,4 @@
-using Drones.Model;
+
 
 namespace Drones
 {
@@ -40,6 +40,11 @@ namespace Drones
             foreach (Drone drone in fleet)
             {
                 drone.Render(airspace);
+            }
+
+            foreach (Building building in amat)
+            {
+                building.Render(airspace);
             }
 
             airspace.Render();

@@ -1,4 +1,3 @@
-using Drones.Model;
 using Drones.Helpers;
 
 namespace Drones
