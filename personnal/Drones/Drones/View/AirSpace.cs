@@ -28,6 +28,11 @@ namespace Drones
             // dimensions the same size as the drawing surface of the form.
             airspace = currentContext.Allocate(this.CreateGraphics(), this.DisplayRectangle);
             this.fleet = fleet;
+            //lancer une erreur si la flotte possède plus de 10 drones
+            if (fleet.Count > 10)
+            {
+                throw new Exception("Trop de drones");
+            }
             this.amat = amat;
         }
 
