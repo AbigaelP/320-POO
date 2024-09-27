@@ -9,15 +9,28 @@ namespace Drones
         private string _name;                           // Un nom
         private int _x ;                                // Position en X depuis la gauche de l'espace aérien
         private int _y;                                 // Position en Y depuis le haut de l'espace aérien
+        priv
+        private EvacuationState evacuationState = EvacuationState.Free;
 
         public int Charge { get => _charge; set => _charge = value; }
         public int X { get => _x; set => _x = value; }
         public string Name { get => _name; set => _name = value; }
         public int Y { get => _y; set => _y = value; }
+        //Constructeurs
+        public Drone()
+        {
 
+        }
+        public Drone(int x, int y)
+        {
+            this.X = x;
+            this.Y = y;
+
+            
+        }
         public bool Evacuate(Rectangle zone)
         {
-            throw new NotImplementedException();
+           if 
         }
 
         public void FreeFlight()
@@ -29,6 +42,7 @@ namespace Drones
         {
             throw new NotImplementedException();
         }
+
 
 
         // Cette méthode calcule le nouvel état dans lequel le drone se trouve après
