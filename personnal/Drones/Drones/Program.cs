@@ -21,21 +21,6 @@ namespace Drones
             drone.Y = 100;
             drone.Name = "Joe";
             fleet.Add(drone);
-            fleet.Add(drone);
-            fleet.Add(drone);
-            fleet.Add(drone);
-            fleet.Add(drone);
-            fleet.Add(drone);
-            fleet.Add(drone);
-            fleet.Add(drone);
-            fleet.Add(drone);
-            fleet.Add(drone);
-            fleet.Add(drone);
-            fleet.Add(drone);
-            fleet.Add(drone);
-            fleet.Add(drone);
-
-
 
             //Création de l'amat de buildings
             List<Building> amat = new List<Building>();
