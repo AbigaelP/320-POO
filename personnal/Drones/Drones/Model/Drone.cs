@@ -9,8 +9,9 @@ namespace Drones
         private string _name;                           // Un nom
         private int _x ;                                // Position en X depuis la gauche de l'espace aérien
         private int _y;                                 // Position en Y depuis le haut de l'espace aérien
-        priv
-        private EvacuationState evacuationState = EvacuationState.Free;
+        private EvacuationState _evacuationState = EvacuationState.Free;
+        private Rectangle _zone = Rectangle.Empty;      //rectangle vide
+        
 
         public int Charge { get => _charge; set => _charge = value; }
         public int X { get => _x; set => _x = value; }
@@ -30,17 +31,29 @@ namespace Drones
         }
         public bool Evacuate(Rectangle zone)
         {
-           if 
+            _zone = zone;
+            Rectangle moi = new Rectangle(X - 4, Y - 2, 8, 8);
+            if (moi.IntersectsWith(zone))
+            {
+                _evacuationState = EvacuationState.Evacuating;
+                return false;
+            }
+            else
+            {
+                _evacuationState = EvacuationState.Evacuated;
+                return true;
+            }
         }
 
         public void FreeFlight()
         {
-            throw new NotImplementedException();
+            _evacuationState = EvacuationState.Free;
+            _zone = Rectangle.Empty;
         }
 
         public EvacuationState GetEvacuationState()
         {
-            throw new NotImplementedException();
+            return _evacuationState;
         }
 
 
