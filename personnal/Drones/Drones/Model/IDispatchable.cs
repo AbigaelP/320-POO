@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Drones
 {
-    interface IDispatchable
+    public interface IDispatchable
     {
         void Register(Box newBox);
 
