@@ -14,13 +14,13 @@ namespace Drones
         // La flotte est l'ensemble des drones qui évoluent dans notre espace aérien
         private List<Drone> fleet;
         private List<Building> amat;
-        private Dispatch dispatch;
+        public static Dispatch stockage = new Dispatch();
 
         BufferedGraphicsContext currentContext;
         BufferedGraphics airspace;
 
         // Initialisation de l'espace aérien avec un certain nombre de drones
-        public AirSpace(List<Drone> fleet, List<Building> amat, Dispatch dispatch)
+        public AirSpace(List<Drone> fleet, List<Building> amat)
         {
             InitializeComponent();
             // Gets a reference to the current BufferedGraphicsContext
@@ -35,7 +35,6 @@ namespace Drones
                 throw new Exception("Trop de drones");
             }
             this.amat = amat;
-            this.dispatch = dispatch;
         }
 
         // Affichage de la situation actuelle
