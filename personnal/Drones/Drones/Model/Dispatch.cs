@@ -18,6 +18,7 @@ namespace Drones
         public void Register(Box newBox)
         {
             boxes.Add(newBox);
+            Console.WriteLine("Reception d'un carton");
         }
     }
 }
