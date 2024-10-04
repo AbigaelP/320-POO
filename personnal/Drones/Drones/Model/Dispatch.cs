@@ -12,12 +12,12 @@ namespace Drones
 
         public void Delete(Box soldBox)
         {
-            throw new NotImplementedException();
+            boxes.Remove(soldBox);
         }
 
         public void Register(Box newBox)
         {
-            throw new NotImplementedException();
+            boxes.Add(newBox);
         }
     }
 }

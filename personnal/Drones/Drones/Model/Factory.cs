@@ -16,6 +16,7 @@ namespace Drones
         private int _count = 60;
         public float PowerConsumption { get => _powerConsumption; set => _powerConsumption = value; }
         public int Id { get => _id; }
+        
 
         public Factory()
         {
@@ -31,7 +32,9 @@ namespace Drones
             {
                 if (Helper.Random(1, 2) == 1)
                 {
+                    Box toto = new Box();
                     Console.WriteLine("Un boite a été crée par l'usine" + Id);
+                    AirSpace.stockage.Register(toto);
                 }
                 _count = 60;
             }
