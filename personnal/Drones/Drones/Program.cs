@@ -22,6 +22,8 @@ namespace Drones
             drone.Name = "Joe";
             fleet.Add(drone);
 
+            Dispatch _dispatch = new Dispatch();
+
             //Création de l'amat de buildings
             List<Building> amat = new List<Building>();
             Building building = new Building();
@@ -39,7 +41,7 @@ namespace Drones
             try
             {
                 // Démarrage
-                Application.Run(new AirSpace(fleet, amat));
+                Application.Run(new AirSpace(fleet, amat, _dispatch));
             }
             catch (Exception e)
             {
