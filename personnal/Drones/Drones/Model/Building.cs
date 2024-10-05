@@ -16,8 +16,8 @@ namespace Drones
         private int _largeur = 25;
         private int _profondeur = 25;
 
-        public int X { get => _x; set => _x = value; }
-        public int Y { get => _y; set => _y = value; }
+        public int X { get => _x;}
+        public int Y { get => _y;}
         public int Largeur { get => _largeur; }
         public int Profondeur { get => _profondeur; }
         public Building() 

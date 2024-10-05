@@ -77,9 +77,13 @@ namespace Drones
                 drone.Update(interval);
             }
 
-            foreach (Factory factory in amat)
+            foreach (Building factory in amat)
             {
-                factory.Update();
+                if (factory.GetType() == typeof(Factory))
+                {
+                    Factory usine = (Factory)factory;
+                    usine.Update();
+                }
             }
         }
 
