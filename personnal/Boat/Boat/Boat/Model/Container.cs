@@ -13,7 +13,10 @@ namespace Boat.Model
         protected int weight;
         //Propriété
         public int Id { get => _id;}
-
+        /// <summary>
+        /// Constructeur
+        /// </summary>
+        /// <param name="weight"></param>
         public Container(int weight) 
         {
             this._id++;
